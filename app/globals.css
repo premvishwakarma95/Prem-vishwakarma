@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.btn-grad {
+  background-image: linear-gradient(to right,
+      #1fa2ff 0%,
+      #12d8fa 51%,
+      #1fa2ff 100%);
+  padding: 0.5rem 1rem;
+  text-align: center;
+
+  transition: 0.5s;
+  background-size: 200% auto;
+
+  color: white;
+  border-radius: 10px;
+
+  border: none;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+}
+
+.circle::before {
+  content: '';
+  background-color: #5a80d2;
+  width: 70%;
+  height: 70%;
+
+  border-radius: 100%;
+  position: absolute;
+
+  top: 10rem;
+  left: 15rem;
+}
+
+img .behind_the_image {
+  width: 100%;
+  height: 100%;
+}
+
+.behind_the_image {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.7;
+    transform: scale(1.05);
+  }
+}
+
+.skill-box {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 11px solid rgb(6, 182, 212);
+}
+
+#tsparticles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
