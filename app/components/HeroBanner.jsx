@@ -11,7 +11,7 @@ export default function HeroBanner() {
     <section className="container grid items-center grid-cols-1 px-4 mx-auto my-4 text-white md:my-16 md:px-[3rem] lg:px-[12rem] justify-items-center md:grid-cols-2 md:gap-12">
       <div className="flex flex-col gap-6 md:gap-8 md:justify-self-start">
         <h1 className="text-3xl font-bold md:text-4xl lg:text-6xl">
-          <span className="text-[#A594FD]">Hello, I&apos;m Prem,</span>
+          <span className="text-[#A594FD]">Hello, I'm Prem,</span>
         </h1>
         <h1 className="text-3xl font-bold md:text-2xl lg:text-4xl">
           <Typewriter
