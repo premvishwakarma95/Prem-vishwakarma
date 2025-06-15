@@ -7,7 +7,7 @@ function PortFolio() {
       className="container px-4 mx-auto my-4  md:my-16 md:px-[3rem] lg:px-[12rem]"
     >
       <h1 className="my-10 text-3xl font-semibold md:my-20">
-        Portfolio
+        Projects
       </h1>
       {/* Render the client-side project listing logic */}
       <ShowProjects />
