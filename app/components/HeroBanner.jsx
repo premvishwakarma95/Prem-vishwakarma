@@ -30,7 +30,7 @@ export default function HeroBanner() {
         </Link>
       </div>
 
-      <div className="h-full w-full">
+      <div className="h-full w-full mt-32 md:mt-0">
         <div className="right_main">
           <img className="behind_the_image" src="/photo.svg" alt="" />
         </div>

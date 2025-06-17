@@ -1,75 +1,116 @@
 'use client';
 
-import { useState } from 'react';
-import ProgressCircular from './ProgressCircular';
+import { useEffect, useRef } from 'react';
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+} from 'react-icons/fa';
+import {
+  SiExpress,
+  SiBootstrap,
+  SiTailwindcss,
+  SiNextdotjs,
+} from 'react-icons/si';
 
-function SkillsShowcase() {
-  const [showAll, setShowAll] = useState(false);
-  // Array of skills and their values
-  const skills = [
-    { name: 'HTML', value: 100 },
-    { name: 'CSS', value: 100 },
-    { name: 'JavaScript', value: 100 },
-    { name: 'Tailwind CSS', value: 100 },
-    { name: 'BootStrap CSS', value: 100 },
-    { name: 'ReactJS', value: 100 },
-    { name: 'NextJS', value: 100 },
-    { name: 'NodeJS', value: 100 },
-    { name: 'ExpressJS', value: 100 },
-    { name: 'MongoDB', value: 100 },
-  ];
+const icons = [
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  SiExpress,
+  SiBootstrap,
+  SiTailwindcss,
+  SiNextdotjs,
+];
 
-  const toggleSkillsDisplay = () => {
-    setShowAll(!showAll);
-  };
+export default function SkillsCarousel() {
+  const topRef = useRef(null);
+  const bottomRef = useRef(null);
 
-  const displayedSkills = showAll ? skills : skills.slice(0, 4);
+  useEffect(() => {
+    const setupClone = (ref) => {
+      const list = ref.current;
+      const container = list?.parentNode;
+
+      if (list && container && !container.dataset.cloned) {
+        const clone = list.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.classList.add('clone');
+        container.appendChild(clone);
+        container.dataset.cloned = 'true';
+      }
+    };
+
+    setupClone(topRef);
+    setupClone(bottomRef);
+  }, []);
 
   return (
-    <section
-      id="skills"
-      className="container px-4 mx-auto my-4  md:my-16 md:px-[3rem] lg:px-[12rem]"
-    >
-      <h1 className="my-10 text-3xl font-semibold md:my-20">
-        My Skills
-      </h1>
-
-      {/* Loop through skills array and render ProgressBar component */}
-      {/* <div className="hidden grid-cols-2 gap-4 mb-6 lg:grid justify-items-center lg:grid-cols-4 lg:gap-8 ">
-        {skills.map((skill, index) => (
-          <ProgressCircular
-            key={index}
-            name={skill.name}
-            value={skill.value}
-          />
-        ))}
-      </div> */}
-      <div className='flex justify-start flex-wrap gap-20'>
-        {skills.map((skill, index) =>
-          <div className='skill-box' key={index}>
-            <h6 className='text text-xl text-[#d9f4f8] font-medium'>{skill.name}</h6>
-          </div>
-        )
+    <div className="relative font-inter antialiased">
+      <style jsx>{`
+        @keyframes scroll-left {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
         }
-      </div>
 
-      {/* <div className="grid grid-cols-2 gap-4 mb-6 lg:hidden justify-items-center lg:grid-cols-4 lg:gap-8 ">
-        {displayedSkills.map((skill, index) => (
-          <ProgressCircular
-            key={index}
-            name={skill.name}
-            value={skill.value}
-          />
-        ))}
-      </div> */}
+        @keyframes scroll-right {
+          0% {
+            transform: translateX(-50%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
 
-      <div className={`flex justify-center mt-4 lg:hidden`}>
-        <button className="btn-grad" onClick={toggleSkillsDisplay}>
-          {showAll ? 'Show Less' : 'Show All'}
-        </button>
+        .animate-scroll-left {
+          animation: scroll-left 25s linear infinite;
+        }
+
+        .animate-scroll-right {
+          animation: scroll-right 25s linear infinite;
+        }
+      `}</style>
+
+      <div className="w-full max-w-6xl mx-auto px-4 py-16 space-y-12">
+        <h1 className="text-3xl font-semibold mb-20">
+          My Skills
+        </h1>
+        {/* Top carousel (Left to Right) */}
+        <div className="relative flex overflow-hidden w-full h-20">
+          <ul
+            ref={topRef}
+            className="flex animate-scroll-left items-center [&_li]:mx-8 [&_svg]:text-[#d9f4f8] [&_svg]:w-12 [&_svg]:h-12"
+          >
+            {icons.map((Icon, index) => (
+              <li key={`top-${index}`}>
+                <Icon />
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Bottom carousel (Right to Left) */}
+        <div className="relative flex overflow-hidden w-full h-20">
+          <ul
+            ref={bottomRef}
+            className="flex animate-scroll-right items-center [&_li]:mx-8 [&_svg]:text-[#d9f4f8] [&_svg]:w-12 [&_svg]:h-12"
+          >
+            {icons.map((Icon, index) => (
+              <li key={`bottom-${index}`}>
+                <Icon />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
-
-export default SkillsShowcase;
