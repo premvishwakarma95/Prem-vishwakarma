@@ -83,7 +83,6 @@ export default function SkillsCarousel() {
         <h1 className="text-3xl font-semibold mb-20">
           My Skills
         </h1>
-        {/* Top carousel (Left to Right) */}
         <div className="relative flex overflow-hidden w-full h-20">
           <ul
             ref={topRef}
