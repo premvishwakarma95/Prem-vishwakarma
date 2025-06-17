@@ -79,7 +79,7 @@ export default function SkillsCarousel() {
         }
       `}</style>
 
-      <div className="w-full max-w-6xl mx-auto px-4 py-16 space-y-12">
+      <div className="w-full max-w-6xl mx-auto px-4 py-16 space-y-12" id='skills'>
         <h1 className="text-3xl font-semibold mb-20">
           My Skills
         </h1>
