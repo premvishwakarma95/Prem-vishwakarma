@@ -6,7 +6,6 @@ import { projects } from '../utils/projectsdb';
 function ShowProjects() {
   const [showAll, setShowAll] = useState(false);
 
-  // Control the number of displayed projects (initially 6)
   const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
   return (
@@ -17,7 +16,6 @@ function ShowProjects() {
         ))}
       </div>
 
-      {/* Conditionally render "Show More" button if there are more than 6 projects */}
       {projects.length > 6 && (
         <div className="flex justify-center mt-8">
           <button

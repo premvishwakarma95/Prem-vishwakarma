@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
+    "framer-motion": "^12.19.1",
     "lucide-react": "^0.445.0",
     "next": "14.2.13",
     "rc-progress": "^4.0.0",

@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { MenuIcon, X } from 'lucide-react';
-import { FaLinkedin, FaFacebook, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,19 +28,19 @@ function NavigationBar() {
 
   const socialLinks = [
     {
-      href: 'https://www.linkedin.com',
+      href: 'https://www.linkedin.com/in/premvishwakarma95/',
       icon: <FaLinkedin />,
       label: 'LinkedIn',
     },
     {
-      href: 'https://www.facebook.com',
-      icon: <FaFacebook />,
-      label: 'Facebook',
-    },
-    {
-      href: 'https://www.github.com',
+      href: 'https://github.com/premvishwakarma95',
       icon: <FaGithub />,
       label: 'GitHub',
+    },
+    {
+      href: 'https://www.instagram.com/_prem_088/',
+      icon: <FaInstagram />,
+      label: 'Facebook',
     },
   ];
 

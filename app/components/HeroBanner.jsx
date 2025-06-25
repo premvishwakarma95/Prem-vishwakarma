@@ -25,9 +25,13 @@ export default function HeroBanner() {
         <p className="text-sm text-gray-400 md:text-lg">
           Passionate about crafting responsive and dynamic user interfaces. I turn complex problems into elegant digital solutions.
         </p>
-        <Link href="/" className="w-48 btn-grad">
+        <a
+          href="/Prem%20Vishwakarma.pdf"
+          download
+          className="w-48 btn-grad text-center block"
+        >
           Download CV
-        </Link>
+        </a>
       </div>
 
       <div className="h-full w-full mt-32 md:mt-0">
