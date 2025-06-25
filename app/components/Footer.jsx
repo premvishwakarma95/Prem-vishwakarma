@@ -55,7 +55,7 @@ function Footer() {
           className="flex items-center gap-2 text-sm text-gray-400 hover:text-[#A594FD] transition"
           aria-label="Email"
         >
-          <span>Let's Connect:</span>
+          <span>Let&apos;s Connect:</span>
           <FaEnvelope className="text-base" />
         </a>
 
