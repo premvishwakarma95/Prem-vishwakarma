@@ -21,10 +21,10 @@ export const metadata = {
     'Portfolio',
     'Web Developer India',
   ],
-  authors: [{ name: 'Prem Vishwakarma', url: 'https://prem-vishwakarma-nine.vercel.app' }],
+  authors: [{ name: 'Prem Vishwakarma', url: 'https://prem-vishwakarma-nine.vercel.app/' }],
   creator: 'Prem Vishwakarma',
   publisher: 'Prem Vishwakarma',
-  metadataBase: new URL('https://prem-vishwakarma-nine.vercel.app'),
+  metadataBase: new URL('https://prem-vishwakarma-nine.vercel.app/'),
 
   openGraph: {
     title: 'Prem Vishwakarma | MERN Stack Developer',
@@ -48,6 +48,10 @@ export const metadata = {
     title: 'Prem Vishwakarma | MERN Stack Developer',
     description: 'View MERN stack projects and resume of Prem Vishwakarma.',
     images: ['/og-image.jpg'],
+  },
+
+  alternates: {
+    canonical: '/',
   },
 
   icons: {
