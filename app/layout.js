@@ -30,11 +30,11 @@ export const metadata = {
     title: 'Prem Vishwakarma | MERN Stack Developer',
     description:
       'Explore full-stack projects and experience of Prem Vishwakarma — skilled in React, Node.js, Express & MongoDB.',
-    url: 'https://prem-vishwakarma-nine.vercel.app/',
+    url: 'https://prem-vishwakarma-nine.vercel.app',
     siteName: 'Prem Vishwakarma Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.jpg', // make sure this image is in /public folder
         width: 1200,
         height: 630,
         alt: 'Prem Vishwakarma Portfolio Preview',
@@ -48,10 +48,6 @@ export const metadata = {
     title: 'Prem Vishwakarma | MERN Stack Developer',
     description: 'View MERN stack projects and resume of Prem Vishwakarma.',
     images: ['/og-image.jpg'],
-  },
-
-  alternates: {
-    canonical: '/',
   },
 
   icons: {
