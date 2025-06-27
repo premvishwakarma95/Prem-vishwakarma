@@ -1,4 +1,17 @@
+'use client'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function AdditionalSkills() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   const additionalSkills = [
     'Git',
     'Postman',
@@ -14,6 +27,7 @@ function AdditionalSkills() {
     <section
       id="additional-skills"
       className="container px-4 mx-auto my-4  md:my-16 md:px-[3rem] lg:px-[12rem]"
+      data-aos="fade-up"
     >
       <h1 className="my-10 text-3xl font-semibold md:my-20">
         Additional Skills

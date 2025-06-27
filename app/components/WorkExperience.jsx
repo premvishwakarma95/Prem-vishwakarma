@@ -1,4 +1,17 @@
+'use client'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function WorkExperience() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   const experiencePoints = [
     {
       date: 'April 2023',
@@ -21,7 +34,7 @@ function WorkExperience() {
   ];
 
   return (
-    <section id="experience" className="container px-4 mx-auto my-8  md:my-16 md:px-[3rem] lg:px-[12rem]">
+    <section id="experience" className="container px-4 mx-auto my-8  md:my-16 md:px-[3rem] lg:px-[12rem]" data-aos="fade-up">
       <h2 className="text-3xl font-bold text-center text-white mb-16">
         Work Experience
       </h2>

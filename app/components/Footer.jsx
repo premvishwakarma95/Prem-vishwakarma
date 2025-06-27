@@ -1,3 +1,7 @@
+'use client'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa';
 
@@ -38,10 +42,19 @@ const renderSocialIcons = () =>
   ));
 
 function Footer() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <footer
       id="footer"
       className="container border-t border-gray-600 py-4 md:py-[2rem] mx-auto my-8 md:my-16 lg:px-[12rem]"
+      data-aos="fade-up"
     >
       <div className="grid items-center grid-cols-2 gap-4 justify-items-center md:grid-cols-4">
         <p className="text-[#A594fd] text-sm">Feel free to contact me</p>

@@ -1,6 +1,20 @@
+'use client'
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function AboutMe() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   return (
     <section
+      data-aos="fade-up"
       id="about"
       className="container px-4 mx-auto my-4 md:my-16 md:px-[3rem] lg:px-[12rem]"
     >

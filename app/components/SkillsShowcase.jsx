@@ -14,6 +14,8 @@ import {
   SiTailwindcss,
   SiNextdotjs,
 } from 'react-icons/si';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const icons = [
   FaHtml5,
@@ -30,6 +32,13 @@ const icons = [
 export default function SkillsCarousel() {
   const topRef = useRef(null);
   const bottomRef = useRef(null);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
 
   useEffect(() => {
     const setupClone = (ref) => {
@@ -50,7 +59,7 @@ export default function SkillsCarousel() {
   }, []);
 
   return (
-    <div className="relative font-inter antialiased">
+    <div className="relative font-inter antialiased" data-aos="fade-up">
       <style jsx>{`
         @keyframes scroll-left {
           0% {
