@@ -7,7 +7,7 @@ function AdditionalSkills() {
     'Teamwork',
     'Quick Learning',
     'Engagement',
-    'Responsive Web Design (RWD)',
+    'Responsive Layout',
   ];
 
   return (

@@ -49,6 +49,14 @@ export const metadata = {
     description: 'View MERN stack projects and resume of Prem Vishwakarma.',
     images: ['/og-image.jpg'],
   },
+
+  alternates: {
+    canonical: '/',
+  },
+
+  icons: {
+    icon: '/logo.svg',
+  },
 };
 
 export default function RootLayout({ children }) {

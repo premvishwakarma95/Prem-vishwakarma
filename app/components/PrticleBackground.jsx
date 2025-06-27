@@ -37,7 +37,7 @@ export default function ParticleBackground({ type = "stars" }) {
             fullScreen: { enable: true, zIndex: -1 },
             background: { color: "#001f3f" },
             particles: {
-                number: { value: 150 },
+                number: { value: 100 },
                 color: { value: "#ffffff" },
                 shape: { type: "circle" },
                 size: { value: 2 },
