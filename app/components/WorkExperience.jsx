@@ -48,6 +48,7 @@ function WorkExperience() {
           <div
             key={index}
             className="flex flex-col justify-between flex-1 bg-[#1e1e2f] border border-[#746FD1] rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
+            data-aos="fade-up"
           >
             <div>
               <div className="text-sm text-[#a9a9c1]">{item.date}</div>
@@ -60,7 +61,7 @@ function WorkExperience() {
         ))}
 
         {/* Current Position Card */}
-        <div className="flex flex-col justify-between flex-1 bg-[#1e1e2f] border border-[#746FD1] rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300">
+        <div className="flex flex-col justify-between flex-1 bg-[#1e1e2f] border border-[#746FD1] rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up">
           <div>
             {/* <div className="text-sm text-[#a9a9c1]">2023 – Present</div> */}
             <h3 className="mt-2 text-lg font-semibold text-white">
