@@ -1,5 +1,7 @@
 'use client';
-import { useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,12 +9,19 @@ import Link from 'next/link';
 function PortfolioCard({ project }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
   const shortText =
     'Measure Your Brain Health with a Cognitive Assessment Test Today! Take our brain specialist-inspired memory assessment';
 
   return (
     <>
-      <div className="p-4 border border-gray-600 bg-custom-gradient transform transition-transform duration-300 hover:scale-105 hover:border-[#7C58B9] hover:cursor-pointer rounded-2xl flex flex-col justify-between">
+      <div className="p-4 border border-gray-600 bg-custom-gradient transform transition-transform duration-300 hover:scale-105 hover:border-[#7C58B9] hover:cursor-pointer rounded-2xl flex flex-col justify-between" data-aos="zoom-in-up">
         <div>
           <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg">
             <Image
