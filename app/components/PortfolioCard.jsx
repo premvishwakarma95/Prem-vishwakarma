@@ -16,12 +16,23 @@ function PortfolioCard({ project }) {
     });
   }, []);
 
+  // -------------------------
+  // ⭐ TRUNCATE DESCRIPTION
+  // -------------------------
+  const maxLength = 100; // change length as needed
   const shortText =
-    'Measure Your Brain Health with a Cognitive Assessment Test Today! Take our brain specialist-inspired memory assessment';
+    project.description.length > maxLength
+      ? project.description.slice(0, maxLength) + '...'
+      : project.description;
+
+  const isTruncated = project.description.length > maxLength;
 
   return (
     <>
-      <div className="p-4 border border-gray-600 bg-custom-gradient transform transition-transform duration-300 hover:scale-105 hover:border-[#7C58B9] hover:cursor-pointer rounded-2xl flex flex-col justify-between" data-aos="zoom-in-up">
+      <div
+        className="p-4 border border-gray-600 bg-custom-gradient transform transition-transform duration-300 hover:scale-105 hover:border-[#7C58B9] hover:cursor-pointer rounded-2xl flex flex-col justify-between"
+        data-aos="zoom-in-up"
+      >
         <div>
           <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg">
             <Image
@@ -36,14 +47,20 @@ function PortfolioCard({ project }) {
             {project.title}
           </h2>
 
-          <p className="mt-4 pb-2 text-sm text-center text-gray-400" style={{ borderBottom: '1px solid' }}>
+          <p
+            className="mt-4 pb-2 text-sm text-center text-gray-400"
+            style={{ borderBottom: '1px solid' }}
+          >
             {shortText}
-            <span
-              className="ml-1 underline cursor-pointer text-blue-400"
-              onClick={() => setIsModalOpen(true)}
-            >
-              See more
-            </span>
+
+            {isTruncated && (
+              <span
+                className="ml-1 underline cursor-pointer text-blue-400"
+                onClick={() => setIsModalOpen(true)}
+              >
+                See more
+              </span>
+            )}
           </p>
         </div>
 
@@ -56,10 +73,6 @@ function PortfolioCard({ project }) {
           >
             Live Preview
           </Link>
-
-          {/* <Link href={project.githubLink} className="btn-grad">
-            Check on GitHub
-          </Link> */}
         </div>
       </div>
 
@@ -93,8 +106,14 @@ function PortfolioCard({ project }) {
                   className="object-cover object-center"
                 />
               </div>
-              <h3 className="text-lg font-semibold text-center mb-2">{project.title}</h3>
-              <p className="text-sm leading-relaxed text-gray-300">{project.description}</p>
+
+              <h3 className="text-lg font-semibold text-center mb-2">
+                {project.title}
+              </h3>
+
+              <p className="text-sm leading-relaxed text-gray-300">
+                {project.description}
+              </p>
             </motion.div>
           </motion.div>
         )}
