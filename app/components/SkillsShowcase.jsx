@@ -59,7 +59,7 @@ export default function SkillsCarousel() {
   }, []);
 
   return (
-    <div className="relative font-inter antialiased" data-aos="fade-up">
+    <div className="relative font-inter antialiased container px-4 mx-auto my-4 md:my-16 md:px-[3rem] lg:px-[12rem]" data-aos="fade-up">
       <style jsx>{`
         @keyframes scroll-left {
           0% {
@@ -88,8 +88,8 @@ export default function SkillsCarousel() {
         }
       `}</style>
 
-      <div className="w-full max-w-6xl mx-auto px-4 py-16 space-y-12" id='skills'>
-        <h1 className="text-3xl font-semibold mb-20">
+      <div className="w-full max-w-6xl space-y-12" id='skills'>
+        <h1 className="my-10 text-3xl font-semibold md:my-20">
           My Skills
         </h1>
         <div className="relative flex overflow-hidden w-full h-20">
