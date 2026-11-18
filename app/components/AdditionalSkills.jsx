@@ -13,14 +13,24 @@ function AdditionalSkills() {
   }, []);
 
   const additionalSkills = [
-    'Git',
+    'AI Agents',
+    'RAG',
+    'MCP Server',
+    'n8n',
+    'Make.com',
+    'VAPI',
+    'RetellAI',
+    'Claude Code',
+    'Codex',
+    'CI/CD (GitHub Actions)',
+    'Service-Oriented Architecture',
+    'API Integration',
     'Postman',
     'Vercel',
     'CloudPanel',
+    'Responsive Layout',
     'Teamwork',
     'Quick Learning',
-    'Engagement',
-    'Responsive Layout',
   ];
 
   return (

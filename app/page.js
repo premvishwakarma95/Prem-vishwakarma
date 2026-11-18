@@ -6,6 +6,8 @@ import NavigationBar from './components/NavigationBar';
 import PortFolio from './components/PortFolio';
 import SkillsShowcase from './components/SkillsShowcase';
 import WorkExperience from './components/WorkExperience';
+import Education from './components/Education';
+import ChatBot from './components/ChatBot';
 import ParticleBackground from './components/PrticleBackground';
 
 export default function Home() {
@@ -27,7 +29,9 @@ export default function Home() {
       <AdditionalSkills />
       <PortFolio />
       <WorkExperience />
+      <Education />
       <Footer />
+      <ChatBot />
     </main>
   );
 }

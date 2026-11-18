@@ -13,6 +13,15 @@ import {
   SiBootstrap,
   SiTailwindcss,
   SiNextdotjs,
+  SiMongodb,
+  SiPostgresql,
+  SiOpenai,
+  SiClaude,
+  SiLangchain,
+  SiDocker,
+  SiAmazonwebservices,
+  SiGit,
+  SiGithubactions,
 } from 'react-icons/si';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -27,6 +36,15 @@ const icons = [
   SiBootstrap,
   SiTailwindcss,
   SiNextdotjs,
+  SiMongodb,
+  SiPostgresql,
+  SiOpenai,
+  SiClaude,
+  SiLangchain,
+  SiDocker,
+  SiAmazonwebservices,
+  SiGit,
+  SiGithubactions,
 ];
 
 export default function SkillsCarousel() {

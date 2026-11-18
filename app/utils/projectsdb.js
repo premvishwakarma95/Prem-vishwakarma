@@ -1,7 +1,24 @@
 export const projects = [
   {
+    title: 'Aiyubot',
+    description: 'Aiyubot is a no-code platform for creating and managing specialized AI agents. Users can connect agents to the tools they already use and coordinate multiple agents to carry out tasks together. The platform is designed to help teams automate workflows and keep work moving without requiring users to build each agent from scratch. It also supports deploying agents across messaging platforms such as Telegram, WhatsApp, Slack, and Discord.',
+    techStack: ['OpenClaw', 'LangChain', 'OpenRouter', 'Next Js', 'Node Js', 'Express Js', 'MongoDB', 'Skills'],
+    image: '/web-7.png',
+    livePreview: 'https://aiyubot.com/',
+    githubLink: 'https://github.com/project-link',
+  },
+  {
+    title: 'Carrier Representative AI Agent',
+    description: "Everly is an AI voice agent that autonomously calls freight carriers on behalf of a drayage marketplace to collect rate quotes on loads that haven't received enough email responses. It ingests carrier and load data via a push-based webhook integration, decides who to call and when using a timezone-aware calling-window and multi-attempt cadence engine, places outbound calls through Vapi, and handles the full conversation via a large-language-model-driven voice assistant — capturing quotes, accessorials, warehouse details, declines, do-not-call requests, and carrier-requested callback times, then writes the results back to the marketplace's API in real time.",
+    techStack: ['Vapi', 'GPT-4.1', 'ElevenLabs (TTS)', 'Deepgram (STT)', 'Node.js', 'Express', 'MongoDB'],
+    image: '/web-8.png',
+    livePreview: null,
+    githubLink: 'https://github.com/project-link',
+  },
+  {
     title: 'Testuity',
     description: 'IQ tests are standardized tests designed to measure intelligence, which is defined as the ability to understand complex ideas, adapt to new situations, and learn from experience. IQ tests typically measure a range of cognitive abilities, such as verbal and mathematical reasoning, spatial perception, and pattern recognition.',
+    techStack: ['React Js', 'Next Js', 'Node Js', 'MongoDB'],
     image: '/web-2.png',
     livePreview: 'https://testuity.com/',
     githubLink: 'https://github.com/project-link',
@@ -9,13 +26,15 @@ export const projects = [
   {
     title: 'Withzibi',
     description: "Measure Your Brain Health with a Cognitive Assessment Test Today! Take our brain specialist-inspired memory assessment and find out where your brain stands.",
+    techStack: ['React Js', 'Node Js', 'Express Js', 'MongoDB'],
     image: '/web-1.png',
     livePreview: 'https://withzibi-frontend.ibrcloud.com/home',
     githubLink: 'https://github.com/project-link',
   },
   {
-    title: 'Consumer Law  Dispute Ai',
+    title: 'Consumer Law Dispute AI',
     description: 'Be the first to gain early access to our groundbreaking Consumer Law Dispute.ai Software. Credit repair is made easy from the comfort of your own home, without ever having to go to the post office to mail out a single dispute letter.',
+    techStack: ['React Js', 'Next Js', 'Node Js', 'MongoDB'],
     image: '/web-3.png',
     livePreview: 'https://www.consumerlawdispute.ai/',
     githubLink: 'https://github.com/project-link',
@@ -23,6 +42,7 @@ export const projects = [
   {
     title: 'Smart Exams',
     description: 'Empower your academic journey with expert-designed English and Math assessments. Take personalized tests to track your progress and strengthen core skills from Grade 1 to Grade 12.',
+    techStack: ['Next Js', 'Node Js', 'Express Js', 'MongoDB'],
     image: '/web-4.png',
     livePreview: 'https://www.smartexams.com.au/',
     githubLink: 'https://github.com/project-link',

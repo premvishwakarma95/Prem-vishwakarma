@@ -25,14 +25,14 @@ export default function HeroBanner() {
         <h1 className="text-3xl font-bold md:text-2xl lg:text-4xl">
           <Typewriter
             options={{
-              strings: ['Full Stack Developer', 'Problem Solver', 'MERN Stack Developer'],
+              strings: ['MERN Stack Developer', 'AI Engineer', 'AI Agent Developer', 'Full Stack Developer'],
               autoStart: true,
               loop: true,
             }}
           />
         </h1>
         <p className="text-sm text-gray-400 md:text-lg">
-          Passionate about crafting responsive and dynamic user interfaces. I turn complex problems into elegant digital solutions.
+          I build web applications, AI agents, and API integrations, from responsive React interfaces to AI voice agents and multi-agent platforms.
         </p>
         <a
           href="/Prem%20Vishwakarma.pdf"

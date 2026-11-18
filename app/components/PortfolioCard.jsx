@@ -6,6 +6,44 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Shows the project screenshot, or a gradient placeholder for projects without one.
+function ProjectImage({ project, className = '' }) {
+  return (
+    <div className={`relative w-full aspect-[16/9] overflow-hidden ${className}`}>
+      {project.image ? (
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill={true}
+          className="object-cover object-center"
+        />
+      ) : (
+        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#2a2350] via-[#1e1e2f] to-[#4b3a8f] p-6">
+          <span className="text-center text-2xl font-bold text-[#A594FD]">
+            {project.title}
+          </span>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function TechStack({ techStack, className = '' }) {
+  if (!techStack?.length) return null;
+  return (
+    <ul className={`flex flex-wrap justify-center gap-2 ${className}`}>
+      {techStack.map((tech) => (
+        <li
+          key={tech}
+          className="rounded-full border border-[#746FD1] px-2 py-0.5 text-xs text-[#c7d1ea]"
+        >
+          {tech}
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 function PortfolioCard({ project }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -34,18 +72,13 @@ function PortfolioCard({ project }) {
         data-aos="zoom-in-up"
       >
         <div>
-          <div className="relative w-full aspect-[16/9] overflow-hidden rounded-lg">
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill={true}
-              className="object-cover object-center"
-            />
-          </div>
+          <ProjectImage project={project} className="rounded-lg" />
 
           <h2 className="mt-5 text-[#c7d1ea] text-xl font-bold text-center">
             {project.title}
           </h2>
+
+          <TechStack techStack={project.techStack} className="mt-3" />
 
           <p
             className="mt-4 pb-2 text-sm text-center text-gray-400"
@@ -65,14 +98,24 @@ function PortfolioCard({ project }) {
         </div>
 
         <div className="flex justify-center gap-4 mt-4">
-          <Link
-            href={project.livePreview}
-            className="btn-grad w-full"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Live Preview
-          </Link>
+          {project.livePreview ? (
+            <Link
+              href={project.livePreview}
+              className="btn-grad w-full"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Preview
+            </Link>
+          ) : (
+            <button
+              type="button"
+              className="btn-grad w-full"
+              onClick={() => setIsModalOpen(true)}
+            >
+              View Details
+            </button>
+          )}
         </div>
       </div>
 
@@ -98,18 +141,13 @@ function PortfolioCard({ project }) {
                 &times;
               </button>
 
-              <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden mb-4">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  fill={true}
-                  className="object-cover object-center"
-                />
-              </div>
+              <ProjectImage project={project} className="rounded-lg mb-4" />
 
               <h3 className="text-lg font-semibold text-center mb-2">
                 {project.title}
               </h3>
+
+              <TechStack techStack={project.techStack} className="mb-4" />
 
               <p className="text-sm leading-relaxed text-gray-300">
                 {project.description}

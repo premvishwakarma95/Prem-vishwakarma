@@ -19,19 +19,16 @@ function AboutMe() {
     >
       <h1 className="my-8 text-3xl font-semibold md:my-20" data-aos="fade-up">About Me</h1>
       <p className="text-sm text-gray-400 md:text-lg mb-4" data-aos="fade-up">
-        Hi, I&apos;m Prem Vishwakarma, a passionate Full-Stack Developer specializing in the MERN stack with production experience using Next.js, TypeScript, and modern web tooling. I love crafting intuitive, high-performance web applications that solve real-world problems with clean, scalable code.
+        Hi, I&apos;m Prem Vishwakarma, a MERN Stack Developer and AI Engineer based in Indore. I build web applications, AI agents, and API integrations, and I work closely with teams to understand requirements, solve problems, and deliver reliable features.
       </p>
       <p className="text-sm text-gray-400 md:text-lg mb-4" data-aos="fade-up">
-        My expertise spans across both frontend and backend, with a focus on building seamless user experiences using React, Redux Toolkit, Context API, and Tailwind CSS. On the backend, I work with Node.js, Express, and MongoDB, using Mongoose to manage complex data structures.
+        With three years of experience at IBR Infotech, I work across the frontend and backend with React, Next.js, Node.js, Express, MongoDB, and PostgreSQL, styled with Tailwind CSS and Bootstrap. I&apos;m comfortable with service-oriented architecture, REST APIs, and third-party integrations, including payment systems like Stripe and PayPal.
       </p>
       <p className="text-sm text-gray-400 md:text-lg mb-4" data-aos="fade-up">
-        I&apos;ve integrated secure and reliable payment systems including Stripe, PayPal, and Authorize.net, and visualized analytics through Chart.js to make data more meaningful and actionable.
+        On the AI side, I build agents and automations with OpenAI, Claude, LangChain, RAG, and MCP servers, along with voice AI platforms like VAPI and RetellAI and workflow tools like n8n and Make.com. Recent work includes an AI voice agent that calls freight carriers to collect rate quotes, and Aiyubot, a no-code platform for building and coordinating AI agents.
       </p>
       <p className="text-sm text-gray-400 md:text-lg mb-4" data-aos="fade-up">
-        I&apos;m comfortable working in agile teams, writing reusable components, implementing REST APIs, and deploying full-stack apps to platforms like Vercel, CloudPanel. I also regularly use tools like Postman, GitHub, and Figma to streamline development and collaboration.
-      </p>
-      <p className="text-sm text-gray-400 md:text-lg mb-4" data-aos="fade-up">
-        I&apos;m continuously learning and love exploring new tech that helps me deliver better results. Whether it&apos;s enhancing UI/UX or optimizing performance, I enjoy pushing the boundaries of what&apos;s possible on the web.
+        I ship with AWS, Docker, Git, and GitHub Actions CI/CD pipelines, and use AI coding tools like Claude Code and Codex in my day-to-day work. I&apos;m always learning, and I enjoy turning new technology into features people actually use.
       </p>
     </section>
   );

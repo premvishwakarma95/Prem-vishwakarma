@@ -30,6 +30,12 @@ function WorkExperience() {
       description:
         'Managing complex projects, improving performance, deploying on cloud, and mentoring junior developers.',
     },
+    {
+      date: 'Recent',
+      title: 'Building AI Agents',
+      description:
+        'Developing AI agents and integrations with OpenAI, Claude, LangChain, RAG, and VAPI, including an autonomous AI voice agent and a no-code multi-agent platform.',
+    },
   ];
 
   return (
@@ -43,7 +49,7 @@ function WorkExperience() {
       </h2>
 
       {/* All cards including current position */}
-      <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-stretch">
+      <div className="flex flex-col gap-8 md:grid md:grid-cols-2 xl:grid-cols-3">
         {experiencePoints.map((item, index) => (
           <div
             key={index}
@@ -74,7 +80,7 @@ function WorkExperience() {
               </p>
               <p>
                 <span className="font-semibold text-white">Role:</span>{' '}
-                MERN Stack Developer
+                MERN Stack Developer &amp; AI Engineer
               </p>
               <p>
                 <span className="font-semibold text-white">Duration:</span>{' '}

@@ -8,9 +8,9 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'Prem Vishwakarma | MERN Stack Developer Portfolio',
+  title: 'Prem Vishwakarma | MERN Stack Developer & AI Engineer',
   description:
-    'Explore the portfolio of Prem Vishwakarma, a MERN Stack Developer experienced in React, Node.js, Express, and MongoDB. View projects, skills, and resume.',
+    'Explore the portfolio of Prem Vishwakarma, a MERN Stack Developer and AI Engineer experienced in React, Next.js, Node.js, MongoDB, and AI agents (OpenAI, Claude, LangChain, Vapi). View projects, skills, and resume.',
   keywords: [
     'Prem Vishwakarma',
     'Software Developer',
@@ -18,6 +18,8 @@ export const metadata = {
     'React Developer',
     'Node.js Developer',
     'Full Stack Developer',
+    'AI Engineer',
+    'AI Agent Developer',
     'Portfolio',
     'Web Developer India',
   ],
@@ -27,9 +29,9 @@ export const metadata = {
   metadataBase: new URL('https://prem-vishwakarma-nine.vercel.app/'),
 
   openGraph: {
-    title: 'Prem Vishwakarma | MERN Stack Developer',
+    title: 'Prem Vishwakarma | MERN Stack Developer & AI Engineer',
     description:
-      'Explore full-stack projects and experience of Prem Vishwakarma — skilled in React, Node.js, Express & MongoDB.',
+      'Explore full-stack and AI agent projects by Prem Vishwakarma — skilled in React, Next.js, Node.js, MongoDB, and AI agents.',
     url: 'https://prem-vishwakarma-nine.vercel.app/',
     siteName: 'Prem Vishwakarma Portfolio',
     images: [
@@ -45,8 +47,8 @@ export const metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Prem Vishwakarma | MERN Stack Developer',
-    description: 'View MERN stack projects and resume of Prem Vishwakarma.',
+    title: 'Prem Vishwakarma | MERN Stack Developer & AI Engineer',
+    description: 'View MERN stack and AI agent projects and the resume of Prem Vishwakarma.',
     images: ['/og-image.jpg'],
   },
 
