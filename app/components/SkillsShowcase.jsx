@@ -107,9 +107,9 @@ export default function SkillsCarousel() {
       `}</style>
 
       <div className="w-full max-w-6xl space-y-12" id='skills'>
-        <h1 className="my-10 text-3xl font-semibold md:my-20">
+        <h2 className="my-10 text-3xl font-semibold md:my-20">
           My Skills
-        </h1>
+        </h2>
         <div className="relative flex overflow-hidden w-full h-20">
           <ul
             ref={topRef}

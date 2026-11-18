@@ -19,10 +19,10 @@ export default function HeroBanner() {
   return (
     <section className="container grid items-center grid-cols-1 px-4 mx-auto my-4 text-white md:my-16 md:px-[3rem] lg:px-[12rem] justify-items-center md:grid-cols-2 md:gap-12">
       <div data-aos="fade-up" className="flex flex-col gap-6 md:gap-8 md:justify-self-start">
-        <h1 className="text-3xl font-bold md:text-4xl lg:text-6xl">
-          <span className="text-[#A594FD]">Hello, I&apos;m Prem,</span>
+        <h1 className="text-3xl font-bold md:text-4xl xl:text-5xl leading-tight break-words">
+          <span className="text-[#A594FD]">Hello, I&apos;m Prem Vishwakarma</span>
         </h1>
-        <h1 className="text-3xl font-bold md:text-2xl lg:text-4xl">
+        <div className="text-3xl font-bold md:text-2xl lg:text-4xl min-h-[2.5rem]">
           <Typewriter
             options={{
               strings: ['MERN Stack Developer', 'AI Engineer', 'AI Agent Developer', 'Full Stack Developer'],
@@ -30,7 +30,7 @@ export default function HeroBanner() {
               loop: true,
             }}
           />
-        </h1>
+        </div>
         <p className="text-sm text-gray-400 md:text-lg">
           I build web applications, AI agents, and API integrations, from responsive React interfaces to AI voice agents and multi-agent platforms.
         </p>
@@ -45,7 +45,7 @@ export default function HeroBanner() {
 
       <div data-aos="fade-up" className="h-full w-full mt-32 md:mt-0">
         <div className="right_main">
-          <img className="behind_the_image" src="/photo.svg" alt="" />
+          <img className="behind_the_image" src="/photo.svg" alt="Prem Vishwakarma, MERN Stack Developer and AI Engineer" />
         </div>
       </div>
     </section>

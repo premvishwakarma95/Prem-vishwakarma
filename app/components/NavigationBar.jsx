@@ -80,7 +80,7 @@ function NavigationBar() {
       {/* <h1 className="z-30 text-xl font-bold text-white transition-transform duration-300 cursor-pointer hover:-rotate-6">
         MyPortfolio
       </h1> */}
-      <img src='/logo.svg' alt='' />
+      <img src='/logo.svg' alt='Prem Vishwakarma' />
 
       {/* Desktop Links */}
       <div className="items-center hidden gap-6 md:flex">
