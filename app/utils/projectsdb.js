@@ -1,5 +1,13 @@
 export const projects = [
   {
+    title: 'Kamana AI',
+    description: 'Kamana AI ("Own Your Intelligence") is a multi-agent AI assistant platform. Users chat with AI agents, such as the built-in Chief of Staff and AI Coach, by text or hands-free voice. The agents act inside connected apps (Gmail, Google Calendar, Notion, Asana, HubSpot, YouTube), search the web and the organisation\'s own knowledge base (PDFs, documents, links, videos), and remember facts about each user across conversations. Replies stream in real time, and admins manage agents, integrations, users and AI models from a dedicated dashboard. Available on web and mobile.',
+    techStack: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL + pgvector', 'LangChain', 'LangGraph', 'Composio', 'React Native (Expo)', 'Docker'],
+    image: '/web-9.png',
+    livePreview: 'https://kamanaai.ibrcloud.com/',
+    githubLink: 'https://github.com/project-link',
+  },
+  {
     title: 'Aiyubot',
     description: 'Aiyubot is a no-code platform for creating and managing specialized AI agents. Users can connect agents to the tools they already use and coordinate multiple agents to carry out tasks together. The platform is designed to help teams automate workflows and keep work moving without requiring users to build each agent from scratch. It also supports deploying agents across messaging platforms such as Telegram, WhatsApp, Slack, and Discord.',
     techStack: ['OpenClaw', 'LangChain', 'OpenRouter', 'Next Js', 'Node Js', 'Express Js', 'MongoDB', 'Skills'],
