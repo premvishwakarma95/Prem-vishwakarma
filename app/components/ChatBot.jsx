@@ -7,7 +7,7 @@ import { Bot, MessageCircle, Send, X } from 'lucide-react';
 const GREETING = {
   role: 'assistant',
   content:
-    "Hi! I'm Prem's assistant. Ask me about Prem's skills, projects, experience, or how to get in touch.",
+    "Hi! 👋 I'm Prem's AI assistant, and Prem built me too. Ask me anything about Prem's skills, AI projects, experience, or how to hire Prem.",
 };
 
 const SUGGESTIONS = [
@@ -120,7 +120,7 @@ export default function ChatBot() {
               </div>
               <div className="flex-1">
                 <p className="text-sm font-semibold">Ask about Prem</p>
-                <p className="text-xs text-gray-400">AI assistant · answers from Prem&apos;s resume</p>
+                <p className="text-xs text-gray-400">Built by Prem · Powered by AI ✨</p>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
